@@ -11,4 +11,6 @@
 |
 */
 
-Route::resource('/', 'ProductController');
+Route::resource('/', 'StoreController');
+Route::get('/product/{slug}','StoreController@show')->name('product-detail');
+

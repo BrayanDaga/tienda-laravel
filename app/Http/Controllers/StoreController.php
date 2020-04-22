@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
-class ProductController extends Controller
+class StoreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-
+        $products = Product::get();
+        return view('store.index',compact('products'));
     }
 
     /**
@@ -44,9 +45,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $product = Product::where('slug',$slug)->first();
+        return view('store.show',compact('product'));
     }
 
     /**
