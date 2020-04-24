@@ -31,6 +31,6 @@
 
 
     <script src="{{ asset('js/pinterest_grid.js') }}"></script>
-    <script src="{{ asset('js/pinterest.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 </body>
 </html>

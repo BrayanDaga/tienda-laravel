@@ -68,14 +68,27 @@
         transition: all 0.3s ease-in-out;
         }
 
-        /**Detalle del Producto*/
-        .product-block{
-            background: #fff;
-            border-radius: 1em;
-            padding: 1em;
-        }
+    /**Detalle del Producto*/
+    .product-block{
+        background: #fff;
+        border-radius: 1em;
+        padding: 1em;
+    }
 
-        /**Slider*/
-        .navbar{
-            margin-bottom: 0;
-        }
+    /**Slider*/
+    .navbar{
+        margin-bottom: 0;
+    }
+
+    /**carrito**/
+.table-cart
+{
+    background: #fff;
+    border-radius: 1em;
+    margin-bottom: 30px;
+    padding: 1em;
+}
+.table-cart img
+{
+    width: 50px;
+}
