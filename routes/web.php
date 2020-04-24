@@ -26,3 +26,7 @@ Route::get('cart/delete/{product}','CartController@delete')->name('cart-delete')
 Route::get('cart/trash','CartController@trash')->name('cart-trash');
 
 Route::get('cart/update/{product}/{quantity?}','CartController@update')->name('cart-update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
