@@ -1,16 +1,3 @@
-<style>
-	.table-cart
-	{
-		background: #fff;
-		border-radius: 1em;
-		margin-bottom: 30px;
-		padding: 1em;
-	}
-	.table-cart img
-	{
-		width: 50px;
-	}
-	</style>
 @extends('store.template')
 
 @section('title'){{ 'Carrito de compras | Detalle del Pedido' }}@endsection
@@ -20,12 +7,13 @@
 		<div class="page-header">
 			<h1><i class="fa fa-shopping-cart"></i> Detalle del Pedido</h1>
 		</div>
-		<div class="page"  style="background:#fff;"	>
+		<div class="table-cart">
+		<div class="page">
 			<div class="table-responsive" >
 	
 				<?php $user =\Auth::user() ?>
 				<h3>Datos del Usuario:</h3>
-				<table class="table table-bordered  table-hover">
+				<table class="table table-bordered  table-striped table-hover">
 					<tbody>
 						<tr>
 							<td>Usuario:</td>
@@ -90,6 +78,6 @@
 			</div>
 			</div>
 		</div>
-<br>
+	</div>
 	</div>
 @endsection

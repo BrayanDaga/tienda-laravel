@@ -1,16 +1,3 @@
-<style>
-.table-cart
-{
-    background: #fff;
-    border-radius: 1em;
-    margin-bottom: 30px;
-    padding: 1em;
-}
-.table-cart img
-{
-    width: 50px;
-}
-</style>
 @extends('store.template')
 @section('content')
     <div class="container text-center">
