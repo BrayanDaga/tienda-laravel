@@ -9,19 +9,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTw0E9niR1INBmDv7mKcyjEK19_SQKA8Tikz2OAA9BZKupoJ25n&usqp=CAU">
+        <img src="http://lorempixel.com/1800/600/">
         <div class="carousel-caption">
             Slider 1
         </div>
       </div>
       <div class="item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQszUuvewClZgUSICjR4pqATOiKScimbWhm7VrJBjzenIfxG7tm&usqp=CAU">
+        <img src="http://lorempixel.com/1800/601/">
         <div class="carousel-caption">
             Slider 2
         </div>
       </div>
       <div class="item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTw0E9niR1INBmDv7mKcyjEK19_SQKA8Tikz2OAA9BZKupoJ25n&usqp=CAU">
+        <img src="http://lorempixel.com/1800/602/">
         <div class="carousel-caption">
             Slider 3
         </div>

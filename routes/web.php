@@ -30,3 +30,5 @@ Route::get('cart/update/{product}/{quantity?}','CartController@update')->name('c
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('order-detail','CartController@orderDetail')->name('order-detail');

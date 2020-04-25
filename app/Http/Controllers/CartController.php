@@ -54,4 +54,15 @@ class CartController extends Controller
         return $total;
     }
    
+    //Detalle del peddido
+    public function orderDetail(){
+        $this->middleware('auth');
+        if(!\Auth::user()) return view('auth.login');
+		if(!\Session::has('cart') || !count(\Session::get('cart'))) return redirect('/');
+
+		$cart = \Session::get('cart');
+		$total = $this->total($cart);
+
+		return view('store.order-detail', compact('cart', 'total'));
+    }
 }

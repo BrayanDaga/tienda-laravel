@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand main-title" href="/">
-				<i class="fa fa-terminal"></i> FiSO
+				<i class="fa fa-terminal"></i> Brayan
 			</a>
 		</div>
 
@@ -29,7 +29,7 @@
 					</ul>
 				</li>-->
 				<li><a href="#">Conocenos<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Contacto</a></li>
+        		<li><a href="#">Contacto</a></li>
         @include('store.partials.user-menu-item')
 			</ul>
 		</div>

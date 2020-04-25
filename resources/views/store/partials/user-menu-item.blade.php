@@ -17,9 +17,13 @@
 			<li>
                 <form action="{{ route('logout') }}" method="post" class="d-inline">
                     @csrf
-                    <button type="submit">Finalizar sesión</button>
+                    <button type="submit" class="btn-link">&nbsp; &nbsp; Finalizar sesión</button>
                 </form>
             </li>
 		</ul>
 	</li>
 @endif
+
+<style>
+
+</style>
