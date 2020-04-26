@@ -10,7 +10,7 @@
 		<div class="table-cart">
 		<div class="page">
 			<div class="table-responsive" >
-	
+
 				<?php $user =\Auth::user() ?>
 				<h3>Datos del Usuario:</h3>
 				<table class="table table-bordered  table-striped table-hover">
@@ -32,9 +32,9 @@
 			</div>
 			<div class="table-responsive" >
 				<h3>Datos del Pedido:</h3>
-		
+
 				@if(count($cart))
-		
+
 					<table class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
@@ -42,7 +42,7 @@
 								<th class="text-center">Precio</th>
 								<th class="text-center">Cantidad</th>
 								<th class="text-center">Subtotal</th>
-							</tr>	
+							</tr>
 						</thead>
 						<tbody>
 							@foreach($cart as $producto)
@@ -52,10 +52,10 @@
 									<td>{{ $producto->quantity }}</td>
 									<td>${{ number_format($producto->price * $producto->quantity, 2) }}</td>
 								</tr>
-							@endforeach	
+							@endforeach
 						</tbody>
 					</table>
-			
+
 					<hr>
 					<h3>
 						<span class="label label-success">
@@ -63,15 +63,15 @@
 						</span>
 					</h3>
 					<p><b>Importante: </b> Costo del envio: $100.00 (se agrega al total de su compra)</p><hr>
-		
+
 					<a class="btn btn-primary" href="{{ \URL::previous() }}">
 						<i class="fa fa-chevron-circle-left"></i> Regresar
 					</a>
-					
-					<button class="btn btn-warning">
+
+					<a href="{{ route('payment') }}" class="btn btn-warning">
 						Pagar con <i class="fa fa-cc-paypal fa-2x"></i>
-					</button>
-		
+                    </a>
+
 				@else
 					<p>No hay productos en el carrito :(</p>
 				@endif

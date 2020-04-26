@@ -32,3 +32,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('order-detail','CartController@orderDetail')->name('order-detail');
+
+
+/*Payoal*/
+Route::get('payment', 'PaypalController@postPayment')->name('payment');
+Route::get('payment/status', 'PaypalController@getPaymentStatus')->name('payment.status');
