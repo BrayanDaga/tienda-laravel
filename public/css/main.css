@@ -6,15 +6,18 @@ body
 	text-align: center;
 }
 
-table
+
+.table-cart
 {
-	background: #fff;
+    background: #fff;
+    border-radius: 1em;
+    margin-bottom: 30px;
+    padding: 1em;
 }
 
-.table-order
+.table-cart img
 {
-	border: 1px solid #c0c0c0;
-	margin-bottom: 5px;
+width: 50px;
 }
 
 table tr th
@@ -22,7 +25,7 @@ table tr th
 	text-align: center;
 }
 
-#grid-products {
+#products {
 	position: relative;
 	max-width: 100%;
 	width: 100%;

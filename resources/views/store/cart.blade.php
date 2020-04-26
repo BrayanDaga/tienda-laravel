@@ -25,7 +25,7 @@
                     <tbody>
                         @foreach ($cart as $item)
                         <tr>
-                            <td><img src="{{ $item->image }}"></td>
+                            <td><img src="{{ $item->image }}" width="50px"></td>
                             <td>{{ $item->name }}</td>
                             <td>${{ number_format($item->price,2) }}</td>
                             <td> 
