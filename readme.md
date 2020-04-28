@@ -1,1 +1,1 @@
-    <img src="public/img/captura.png">
+<p align="center"><img src="public/img/captura.PNG"></p>
