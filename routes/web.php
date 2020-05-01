@@ -14,6 +14,10 @@ Route::bind('product',function($slug){
     return App\Product::where('slug',$slug)->first();
 
 });
+Route::bind('category',function($category){
+    return App\Category::find($category);
+
+});
 
 Route::resource('/', 'StoreController');
 Route::get('/product/{slug}','StoreController@show')->name('product-detail');
@@ -37,3 +41,14 @@ Route::get('order-detail','CartController@orderDetail')->name('order-detail');
 /*Payoal*/
 Route::get('payment', 'PaypalController@postPayment')->name('payment');
 Route::get('payment/status', 'PaypalController@getPaymentStatus')->name('payment.status');
+
+
+Route::resource('category', 'admin\CategoryController');
+Route::get('/category/edit/{category}', 'admin\CategoryController@edit')->name('category.edit');
+Route::put('/category/edit/{category}', 'admin\CategoryController@update')->name('category.update');
+Route::delete('/category/destroy/{category}', 'admin\CategoryController@destroy')->name('category.destroy');
+
+
+Route::get('admin/home', function () {
+    return view('admin.home');
+});
