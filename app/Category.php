@@ -9,8 +9,13 @@ class Category extends Model
     protected $table = "categories";
 
     protected $fillable = [
-        'name', 'slug', 'description','color'
+        'id','name', 'slug', 'description','color'
     ];
 
     public $timestamps = false;
+
+    public function producsts()
+    {
+        return $this->hasMany('App\Product');
+    }
 }
