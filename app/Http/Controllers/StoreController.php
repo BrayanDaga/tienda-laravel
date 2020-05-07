@@ -11,12 +11,12 @@ class StoreController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     * 
-     * 
+     *
+     *
      */
     public function index()
     {
-        $products = Product::get();
+        $products = Product::paginate(4);
         return view('store.index',compact('products'));
     }
 

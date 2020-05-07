@@ -1,5 +1,5 @@
 @extends('store.template')
-@section('content') 
+@section('content')
     @include('store.partials.slider')
     <div class="container text-center">
         <div id="products">
@@ -11,14 +11,15 @@
                         <p>{{ $product->description }}</p>
                         <h3> <span class="label label-success">Precio: ${{ number_format($product->price,2) }} </span> </h3>
                         <p>
-                            <a href="{{ route('cart-add',$product->slug) }}" class="btn btn-warning"> 
+                            <a href="{{ route('cart-add',$product->slug) }}" class="btn btn-warning">
                                 <i class="fa fa-cart-plus"></i> Lo quiero
                             </a>
                             <a href="{{ route('product-detail',$product->slug) }}" class="btn btn-primary"> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Leer mas</a>
                         </p>
                     </div>
-                </div>    
+                </div>
             @endforeach
         </div>
+        {{ $products->links() }}
     </div>
 @endsection
