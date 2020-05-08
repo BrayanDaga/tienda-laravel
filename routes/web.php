@@ -55,8 +55,17 @@ Route::get('admin/home', function () {
 
 Route::resource('Aproduct', 'admin\ProductController');
 Route::get('/Aproduct/edit/{product}', 'admin\ProductController@edit')->name('product.edit');
-Route::get('/Aproduct/edit/{product}', 'admin\ProductController@edit')->name('product.edit');
 Route::put('/Aproduct/edit/{product}', 'admin\ProductController@update')->name('product.update');
 Route::delete('/Aproduct/destroy/{product}', 'admin\ProductController@destroy')->name('product.destroy');
+
+// User dependency injection
+Route::bind('user', function($user){
+    return App\User::find($user);
+});
+Route::resource('user', 'admin\UserController');
+Route::get('/user/edit/{user}', 'admin\UserController@edit')->name('user.edit');
+Route::put('/user/edit/{user}', 'admin\UserController@update')->name('user.update');
+Route::delete('/user/destroy/{user}', 'admin\UserController@destroy')->name('user.destroy');
+
 
 

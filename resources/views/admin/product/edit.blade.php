@@ -70,9 +70,7 @@
                         <div class="form-group">
                             <label for="visible" class="form-check-label">Visible:</label>
                             <input type="checkbox" name="visible" id="visible" class="form-check-input"
-                            @if ($product->visible > 0)
-                            checked>
-                            @endif
+                            {{ $product->visible > 0  ? "checked": ""}}  >
                         </div>
 
                         <div class="form-group">
